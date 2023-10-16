@@ -1,0 +1,13 @@
+#! /bin/bash
+clear
+if [ $# -ne 1 ]
+then
+echo Invalid number of arguments
+exit
+fi
+if [ -e $1 ]
+then
+echo File $1 is created on :`ls -l | tr -s " " | cut -d " " -f6,7,8`
+else
+echo File not found
+fi
