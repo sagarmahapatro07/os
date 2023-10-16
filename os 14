@@ -1,0 +1,12 @@
+BEGIN {
+printf " Total number of books each category\n";
+}
+{
+b[$1] += $2;
+}
+END {
+for(item in b) {
+printf "%s %s %d \n", item , "=", b[item]; total += b[item];
+}
+printf "%s %s %s \n", "total books", "=",total;
+}
