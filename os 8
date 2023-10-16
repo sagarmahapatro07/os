@@ -1,0 +1,10 @@
+#! /bin/bash
+clear
+echo `ls > listfiles`
+echo the file with characters greater than 9
+for i in `cat listfiles`
+do
+len=`expr length $i`
+if [ $len -gt 9 ]
+then echo $i else continue fi
+done
