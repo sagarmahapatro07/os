@@ -1,0 +1,15 @@
+BEGIN{ 
+printf"enter the basic salary:Rs"
+getline bp<"/dev/tty" 
+if(bp<10000) 
+{ 
+hra=.15*bp da=.45*bp 
+} 
+else 
+{ 
+hra=.2*bp
+da=.5*bp 
+} 
+gs=bp+hra+da 
+printf"gross salary=Rs.%.2f\n",gs 
+}
