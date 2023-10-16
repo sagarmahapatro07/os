@@ -1,0 +1,10 @@
+clear
+a=`date +%e`
+if [ $a -lt 10 ]
+then
+echo $a
+cal | sed s/$a/*/
+else
+cal | sed s/$a/**/
+echo $a
+fi
