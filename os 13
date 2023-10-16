@@ -1,0 +1,12 @@
+BEGIN {
+printf " Program starts\n" ;
+}
+{
+if ( data[$0]++ == 0 )
+line[++count]=$0;
+}
+END {
+for (i=1; i<= count; i++)
+printf "\n" line[i]; printf " \n\n program ends";
+printf "\n"
+}
