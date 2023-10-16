@@ -1,0 +1,15 @@
+#! /bin/bash
+clear
+if [ $# -eq 0 ]
+then
+echo Invalid number of arguments exit
+fi
+for fn in "$@"
+do
+if [ -f $fn ]
+then
+echo $fn | tr '[a-z]' '[A-Z]'
+else
+echo File not found
+fi
+done
