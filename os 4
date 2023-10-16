@@ -1,0 +1,16 @@
+clear
+echo Enter the filename:\c
+read fn
+if [ -f $fn ]
+then
+echo File permissions are echo `ls -l $fn | cut -d ' ' -f1`
+echo Number of links to the file echo `ls -l $fn | cut -d ' ' -f2`
+echo File size
+echo `ls -l $fn | cut -d ' ' -f5`
+echo Last modified Month
+echo `ls -l $fn | cut -d ' ' -f6`
+echo Last modified Date
+echo `ls -l $fn | cut -d ' ' -f7`
+else
+echo File not found
+fi
