@@ -1,0 +1,16 @@
+C Program for open() system call
+#include<stdio.h>
+#include<fcntl.h>
+#include<errno.h>
+extern int errno;
+int main() {
+int fd = open("exposure.txt", O_RDONLY | O_CREAT);
+printf("fd = %d \n", fd);
+if (fd == -1) {
+// print which type of error have in a code
+printf("\n Error Number % d\n", errno);
+// print program detail "Success or failure"
+perror("Program");
+}
+return 0;
+}
