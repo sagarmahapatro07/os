@@ -1,0 +1,28 @@
+if [ -f $fn ]
+then
+        echo file premissions
+        echo ls -l $fn | cut -d ' ' -f1
+
+        echo numbers of links to the file
+        echo ls -l $fn | cut -d ' ' -f3
+
+        echo user id number
+        echo ls -l $fn | cut -d ' ' -f4
+         echo group id number
+        echo ls -l $fn | cut -d ' ' -f5
+         echo file size
+        echo ls -l $fn | cut -d ' ' -f6
+
+        echo last modified month
+        echo ls -l $fn | cut -d ' ' -f7
+        echo last modified date
+        echo ls -l $fn | cut -d ' ' -f8
+
+         echo time
+        echo ls -l $fn | cut-d ' ' -f9
+
+         echo file name
+        echo ls -l $fn | cut-d ' ' -f10
+else
+        echo file not found
+fi
